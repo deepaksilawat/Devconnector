@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://IBEK2021:IBEK2021@cluster0.wy0gy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "hellothisissecretkey",
+    "githubClientId":"57bff8cdc662ccc76ac2",
+    "githubSecret":"300dd115124894c8f13e4ee309ecf6e503bcc22a"
+}
