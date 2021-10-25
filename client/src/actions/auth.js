@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { setAlert } from './alert';
-import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL } from './types';
+import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from './types';
 import setAuthToken from '../utils/setAuthToken';
 
 // Load User
@@ -28,7 +28,7 @@ export const loadUser = () => async dispatch => {
 export const register = ({ name,email,password}) => async dispatch =>{
     const config = {
         headers:{
-            'Content-Type' : 'Application/json'
+            'Content-Type' : 'application/json'
         }
     }
     const  body = JSON.stringify({ name,email,password });
@@ -56,10 +56,10 @@ export const register = ({ name,email,password}) => async dispatch =>{
 }
 
 // Login User
-export const login = ({ email,password}) => async dispatch =>{
+export const login = ( email,password) => async dispatch =>{
     const config = {
         headers:{
-            'Content-Type' : 'Application/json'
+            'Content-Type' : 'application/json'
         }
     }
     const  body = JSON.stringify({ email,password });
@@ -86,3 +86,8 @@ export const login = ({ email,password}) => async dispatch =>{
     }
 }
 
+// LOGOUT /Clear profile
+
+export const logout = () => dispatch =>{
+    dispatch({ type: LOGOUT});
+};
